@@ -1,0 +1,28 @@
+[package]
+name = "mcp_test"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rust-mcp-sdk = { version="0.5.0", default-features = false, features = [
+    "server",
+    "macros",
+    "hyper-server",
+    "ssl",
+    "2025_06_18",
+] }
+
+tokio = { version = "1.4", features = ["full"] }
+serde = { version = "1.0", features = ["derive", "serde_derive"] }
+serde_json = { version = "1.0" }
+async-trait = { version = "0.1" }
+futures = { version = "0.3" }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = [
+    "env-filter",
+    "std",
+    "fmt",
+] }
+
+
+
